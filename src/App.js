@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import Header from './component/Header';
+import Second from './component/Second';
+import './App.css'
+import DetailForm from './component/DetailForm';
+import Third from './component/Third';
+import Fourth from './component/Fourth';
+import Last from './component/Last';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Contain>
+         <Header/>
+         <Second/>
+         <DetailForm/>
+         <Third/>
+         <Fourth/>
+         <Last/>
+    </Contain>
+  )
 }
 
-export default App;
+const Contain = styled.div`
+ display: flex;
+ flex-direction: column;
+ background-color: #000;
+ color: #fff;
+`;
+
+export default App
